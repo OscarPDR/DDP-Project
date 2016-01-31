@@ -139,6 +139,35 @@ shinyUI(
                     DT::dataTableOutput('main_table')
                 )
             )
+        ),
+        tabPanel(
+            'Reactive price chart',
+            fluidRow(
+                column(1),
+                column(
+                    2,
+                    radioButtons(
+                        "xvar", 
+                        label='X axis variable',
+                        choices=list(
+                            'carat',
+                            'cut',
+                            'color',
+                            'clarity',
+                            'x',
+                            'y',
+                            'z',
+                            'depth',
+                            'table'
+                        ),
+                        selected='carat'
+                    )
+                ),
+                column(
+                    8,
+                    plotOutput('chart')
+                )
+            )
         )
     )
 )
