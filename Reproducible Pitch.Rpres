@@ -1,0 +1,46 @@
+Developing Data Products - Project
+========================================================
+author: Oscar Peña del Rio 
+date: January 31st, 2016
+
+ggplot2's diamonds dataset
+========================================================
+
+The nearly 54k observations are defined by:
+
+- Price: in US dollars
+- Carat: weight of the diamond
+- Cut: quality of the cut
+- Color: diamond color
+- Clarity: a measurement of how clear the diamond is
+- X: length in mm
+- Y: width in mm
+- Z: depth in mm
+- Depth: total depth percentage = z / mean(x, y)
+- Table: width of top of diamond relative to widest point
+
+The dataset looks as follows
+========================================================
+
+```{r}
+library(ggplot2)
+summary(diamonds)
+```
+
+Data table view
+========================================================
+
+This tab panel allows to filter the rows present in the dataset according to three variables:
+
+- Carat
+- Cut
+- Color
+
+Only those rows matching the selection will be rendered
+
+Price chart view
+========================================================
+
+Finally, the last tab panel plots a chart, in which the Y-axis will always be the **price** variable.
+
+The user can select any other variable for the X-axis, and the chart will react to the user's input in little time.
